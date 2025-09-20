@@ -1,0 +1,92 @@
+{
+    "10-16-2024": [
+        {
+            "nome": "Reserva de emergência",
+            "bruto": 10000.34,
+            "liquido": 9000.04
+        },
+        {
+            "nome": "Economias",
+            "bruto": 25000.5,
+            "liquido": 24000.06
+        },
+        {
+            "nome": "Reserva 2",
+            "bruto": 3000.07,
+            "liquido": 2500
+        }
+    ],
+    "10-23-2024": [
+        {
+            "nome": "Reserva de emergência",
+            "bruto": 12000.34,
+            "liquido": 10000.04
+        },
+        {
+            "nome": "Economias",
+            "bruto": 27324.5,
+            "liquido": 27049.06
+        },
+        {
+            "nome": "Reserva 2",
+            "bruto": 4500.07,
+            "liquido": 3300.0
+        }
+    ],
+    "10-30-2024": [
+        {
+            "nome": "Reserva de emergência",
+            "bruto": 13000.34,
+            "liquido": 14000.04
+        },
+        {
+            "nome": "Economias",
+            "bruto": 27324.5,
+            "liquido": 27049.06
+        },
+        {
+            "nome": "Reserva 2",
+            "bruto": 4500.07,
+            "liquido": 3300.0
+        }
+    ],
+    "01-17-2025": [
+        {
+            "nome": "Reserva de emergência",
+            "bruto": 12000.34,
+            "liquido": 10000.04
+        },
+        {
+            "nome": "Economias",
+            "bruto": 28000.5,
+            "liquido": 29000.06
+        },
+        {
+            "nome": "Reserva 2",
+            "bruto": 4500.07,
+            "liquido": 3300.0
+        }
+    ],
+    "06-18-2025": [
+        {
+            "nome": "Reserva de emergência",
+            "bruto": 12000.34,
+            "liquido": 10000.04
+        },
+        {
+            "nome": "Economias",
+            "bruto": 27324.5,
+            "liquido": 27049.06
+        },
+        {
+            "nome": "Reserva 2",
+            "bruto": 4500.07,
+            "liquido": 3300.0
+        },
+        {
+            "nome": "Reserva 3",
+            "bruto": 69586.07,
+            "liquido": 67558
+        }
+    ]
+}
