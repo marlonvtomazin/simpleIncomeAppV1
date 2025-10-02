@@ -1,5 +1,10 @@
 ###  Para executar
-Na raiz do projeto execute o servidor
+Instale as dependencias
+```
+npm install
+```
+
+Execute o servidor
 ```
 http-server
 ```
