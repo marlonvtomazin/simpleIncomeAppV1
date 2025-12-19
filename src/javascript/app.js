@@ -1,6 +1,11 @@
 // A URL do seu arquivo JSON. O caminho é relativo ao arquivo HTML.
 const jsonUrl = 'src/data/realIncome.json';
 
+function formatDatePtBR(dateString) {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('pt-BR').format(date);
+}
+
 // Use a API fetch para carregar o arquivo JSON.
 fetch(jsonUrl)
   .then(response => {
@@ -23,7 +28,7 @@ fetch(jsonUrl)
     
     const dateParts = lastDate.split('-');
     const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
-    document.getElementById('dynamic-date').textContent = formattedDate;
+    document.getElementById('dynamic-date').textContent = formatDatePtBR(lastDate);
     
     // Formata os valores para moeda brasileira
     const formatter = new Intl.NumberFormat('pt-BR', {
@@ -65,7 +70,7 @@ fetch(jsonUrl)
     new Chart(document.getElementById('barChart'), {
       type: 'bar',
       data: {
-        labels: dates,
+        labels: dates.map(formatDatePtBR),
         datasets: barChartDatasets
       },
       options: {
@@ -94,7 +99,7 @@ fetch(jsonUrl)
     new Chart(document.getElementById('lineChart'), {
       type: 'line',
       data: {
-        labels: dates,
+        labels: dates.map(formatDatePtBR),
         datasets: [
           {
             label: 'Total Bruto',
@@ -140,7 +145,7 @@ fetch(jsonUrl)
         
         dailyGainsBruto.push(currentDayTotalBruto - previousDayTotalBruto);
         dailyGainsLiquido.push(currentDayTotalLiquido - previousDayTotalLiquido);
-        dailyLabels.push(dates[i]);
+        dailyLabels.push(formatDatePtBR(dates[i]));
     }
 
     new Chart(document.getElementById('gainChart'), {
