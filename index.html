@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Análise de Ativos</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
-    h1 { text-align: center; }
-    .chart-container { width: 90%; max-width: 800px; margin: 20px 0; }
-    .current-values-container { text-align: center; margin-bottom: 20px; }
-    .value-box { 
-      border: 1px solid #ccc; 
-      padding: 15px; 
-      border-radius: 8px; 
-      display: inline-block; 
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .chart-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px 0;
+    }
+
+    .current-values-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .value-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      display: inline-block;
       margin: 0 10px;
     }
-    .value-box h3 { margin-top: 0; }
+
+    .value-box h3 {
+      margin-top: 0;
+    }
 
     /* Nova classe CSS para o valor líquido */
     .net-value-box {
       border-color: #28a745;
       background-color: #e0f2e0;
     }
+
     .gross-value-box {
       border-color: #2831a7;
       background-color: #9fb5f3;
     }
   </style>
 </head>
+
 <body>
   <h1>Visão Geral dos Ativos</h1>
+
+  <p id="last-evaluation-desc" style="text-align: center; color: #555; margin-bottom: 25px;">
+    Dados baseados na última atualização em: <strong id="dynamic-date">...</strong>
+  </p>
 
   <div class="current-values-container">
     <div class="value-box gross-value-box">
@@ -47,7 +75,7 @@
     <h2>Total Bruto e Líquido por Data</h2>
     <canvas id="barChart"></canvas>
   </div>
-  
+
   <div class="chart-container">
     <h2>Evolução das Categorias (Líquido)</h2>
     <canvas id="lineChart"></canvas>
@@ -60,4 +88,5 @@
 
   <script src="src/javascript/app.js"></script>
 </body>
+
 </html>

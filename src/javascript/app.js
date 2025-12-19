@@ -1,5 +1,5 @@
 // A URL do seu arquivo JSON. O caminho é relativo ao arquivo HTML.
-const jsonUrl = 'src/data/income.json';
+const jsonUrl = 'src/data/realIncome.json';
 
 // Use a API fetch para carregar o arquivo JSON.
 fetch(jsonUrl)
@@ -20,6 +20,10 @@ fetch(jsonUrl)
     
     const lastTotalBruto = lastData.reduce((sum, item) => sum + item.bruto, 0);
     const lastTotalLiquido = lastData.reduce((sum, item) => sum + item.liquido, 0);
+    
+    const dateParts = lastDate.split('-');
+    const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
+    document.getElementById('dynamic-date').textContent = formattedDate;
     
     // Formata os valores para moeda brasileira
     const formatter = new Intl.NumberFormat('pt-BR', {
